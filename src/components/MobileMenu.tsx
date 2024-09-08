@@ -50,9 +50,32 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             <AccordionItem value="whats-new">
               <AccordionTrigger>What's new</AccordionTrigger>
               <AccordionContent>
-                <p className="text-sm text-muted-foreground pl-4">
-                  Stay tuned for updates!
-                </p>
+                <div className="pl-4 space-y-2">
+                  <Link
+                    href="/blog/10-tips-for-solo-entrepreneurs"
+                    className="block text-sm font-medium "
+                  >
+                    10 Tips for Solo Entrepreneurs
+                  </Link>
+                  <Link
+                    href="/blog/what-would-the-future-look-like-with-ai"
+                    className="block text-sm font-medium"
+                  >
+                    What would the future look like with AI?
+                  </Link>
+                  <Link
+                    href="/blog/financial-management-tips-for-startups"
+                    className="block text-sm font-medium"
+                  >
+                    Financial Management Tips for Startups
+                  </Link>
+                  <Link
+                    href="/blogs"
+                    className="block text-sm font-medium underline"
+                  >
+                    View all
+                  </Link>
+                </div>
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="about">

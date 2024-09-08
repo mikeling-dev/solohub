@@ -6,7 +6,7 @@ import { Sparkles, Menu } from "lucide-react";
 import Link from "next/link";
 import { ModeToggle } from "./ToggleMode";
 import { MobileMenu } from "./MobileMenu";
-import { useState } from "react";
+import React, { useState } from "react";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -16,6 +16,33 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
+
+import { blogPosts } from "@/data/blogPosts";
+import { cn } from "@/lib/utils";
+
+const ListItem = React.forwardRef<
+  React.ElementRef<"a">,
+  React.ComponentPropsWithoutRef<"a"> & { href: string }
+>(({ className, title, children, ...props }, ref) => {
+  return (
+    <li>
+      <Link
+        ref={ref}
+        className={cn(
+          "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+          className
+        )}
+        {...props}
+      >
+        <div className="text-sm font-medium leading-none">{title}</div>
+        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+          {children}
+        </p>
+      </Link>
+    </li>
+  );
+});
+ListItem.displayName = "ListItem";
 
 export function NavBar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -67,13 +94,23 @@ export function NavBar() {
             <NavigationMenuItem>
               <NavigationMenuTrigger>What's new</NavigationMenuTrigger>
               <NavigationMenuContent>
-                <NavigationMenuLink href="/blogs">
-                  <div className="p-4 md:w-[400px] lg:w-[500px]">
-                    <p className="text-sm text-muted-foreground">
-                      Stay tuned for updates!
-                    </p>
-                  </div>
-                </NavigationMenuLink>
+                <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+                  {blogPosts.map((blog) => (
+                    <ListItem
+                      key={blog.id}
+                      title={blog.title}
+                      href={`/blog/${blog.url}`}
+                    >
+                      {blog.excerpt}
+                    </ListItem>
+                  ))}
+                  <Link
+                    href="/blogs"
+                    className="flex align-middle items-center justify-center hover:bg-accent hover:text-accent-foreground rounded-sm"
+                  >
+                    View all
+                  </Link>
+                </ul>
               </NavigationMenuContent>
             </NavigationMenuItem>
             <NavigationMenuItem>
