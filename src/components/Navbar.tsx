@@ -7,6 +7,15 @@ import Link from "next/link";
 import { ModeToggle } from "./ToggleMode";
 import { MobileMenu } from "./MobileMenu";
 import { useState } from "react";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  navigationMenuTriggerStyle,
+} from "@/components/ui/navigation-menu";
 
 export function NavBar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -24,18 +33,118 @@ export function NavBar() {
       >
         SoloHub
       </Link>
-      <div className="hidden md:flex space-x-4">
-        <Button variant="ghost" asChild>
-          <Link href="/ideas" className="flex items-center gap-1">
-            Ideas <Sparkles className="h-4" />
-          </Link>
-        </Button>
-        <Button variant="ghost" asChild>
-          <Link href="/blog">What's new</Link>
-        </Button>
-        <Button variant="ghost" asChild>
-          <Link href="/about">About</Link>
-        </Button>
+      <div className="hidden md:flex items-center space-x-4">
+        <NavigationMenu>
+          <NavigationMenuList>
+            <NavigationMenuItem>
+              <NavigationMenuTrigger>Ideas</NavigationMenuTrigger>
+              <NavigationMenuContent>
+                <NavigationMenuLink href="/ideas">
+                  <div className="p-4 md:w-[400px] lg:w-[500px]">
+                    <div className="flex flex-row w-full gap-2">
+                      <h3 className="text-lg font-semibold mb-2 ">
+                        Share your ideas
+                      </h3>
+                      <Sparkles className="w-4 h-4" />
+                    </div>
+                    <p className="text-sm text-muted-foreground mb-2">
+                      We welcome all ideas that:
+                    </p>
+                    <ul className="list-disc pl-5 mb-4 text-sm">
+                      <li>Smoothen your workflow</li>
+                      <li>Save time</li>
+                      <li>Improve efficiency in your industry</li>
+                    </ul>
+                    <p className="text-sm text-muted-foreground">
+                      We will pick an idea every month and build it for free.
+                      You will also share the profit if your idea is chosen and
+                      being monetized.
+                    </p>
+                  </div>
+                </NavigationMenuLink>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <NavigationMenuTrigger>What's new</NavigationMenuTrigger>
+              <NavigationMenuContent>
+                <NavigationMenuLink href="/whats-new">
+                  <div className="p-4 md:w-[400px] lg:w-[500px]">
+                    <p className="text-sm text-muted-foreground">
+                      Stay tuned for updates!
+                    </p>
+                  </div>
+                </NavigationMenuLink>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <NavigationMenuTrigger>About</NavigationMenuTrigger>
+              <NavigationMenuContent>
+                <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+                  <li className="row-span-3">
+                    <NavigationMenuLink asChild>
+                      <a
+                        className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                        href="/about"
+                      >
+                        <div className="mb-2 mt-4 text-lg font-medium">
+                          SoloHub
+                        </div>
+                        <p className="text-sm leading-tight text-muted-foreground">
+                          Learn about our mission and vision
+                        </p>
+                      </a>
+                    </NavigationMenuLink>
+                  </li>
+                  <li>
+                    <NavigationMenuLink asChild>
+                      <a
+                        href="/services"
+                        className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                      >
+                        <div className="text-sm font-medium leading-none">
+                          Our Services
+                        </div>
+                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                          See what you can achieve with our services
+                        </p>
+                      </a>
+                    </NavigationMenuLink>
+                  </li>
+                  <li>
+                    <NavigationMenuLink asChild>
+                      <a
+                        href="/tools"
+                        className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                      >
+                        <div className="text-sm font-medium leading-none">
+                          Tools we developed
+                        </div>
+                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                          Explore our suite of productivity tools
+                        </p>
+                      </a>
+                    </NavigationMenuLink>
+                  </li>
+                  <li>
+                    <NavigationMenuLink asChild>
+                      <a
+                        href="/join"
+                        className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                      >
+                        <div className="text-sm font-medium leading-none">
+                          Join us
+                        </div>
+                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                          Become part of our growing community
+                        </p>
+                      </a>
+                    </NavigationMenuLink>
+                  </li>
+                </ul>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+          </NavigationMenuList>
+        </NavigationMenu>
         <Button asChild>
           <Link href="/get-started">Get Started</Link>
         </Button>

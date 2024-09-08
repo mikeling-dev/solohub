@@ -18,26 +18,22 @@ export default function LandingPage() {
           Welcome to SoloHub
         </motion.h1>
         <motion.p
-          className="text-xl mb-6 text-muted-foreground"
+          className="text-xl mb-2 text-muted-foreground"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          Your all-in-one platform for solo entrepreneurs
+          All-in-one platform for solo entrepreneurs
         </motion.p>
-        {/* <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
+        <motion.p
+          className="text-lg mb-6 text-muted-foreground"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
         >
-          <Card className="bg-transparent text-primary mb-8">
-            <CardContent className="p-2">
-              <p className="text-lg font-semibold">
-                Automate your business now
-              </p>
-            </CardContent>
-          </Card>
-        </motion.div> */}
+          Turn your ideas into startups with our
+        </motion.p>
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
