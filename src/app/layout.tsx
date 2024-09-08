@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { NavBar } from "@/components/Navbar";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import { Toaster } from "@/components/ui/sonner";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -26,6 +27,7 @@ export default function RootLayout({
           <NavBar />
           <main>{children}</main>
         </ThemeProvider>
+        <Toaster />
       </body>
     </html>
   );

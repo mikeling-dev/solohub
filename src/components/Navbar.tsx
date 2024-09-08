@@ -67,7 +67,7 @@ export function NavBar() {
             <NavigationMenuItem>
               <NavigationMenuTrigger>What's new</NavigationMenuTrigger>
               <NavigationMenuContent>
-                <NavigationMenuLink href="/whats-new">
+                <NavigationMenuLink href="/blogs">
                   <div className="p-4 md:w-[400px] lg:w-[500px]">
                     <p className="text-sm text-muted-foreground">
                       Stay tuned for updates!

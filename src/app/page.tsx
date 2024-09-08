@@ -31,7 +31,7 @@ export default function LandingPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
-          Turn your ideas into startups with our
+          Time to grow your business efficiently
         </motion.p>
 
         <motion.div
