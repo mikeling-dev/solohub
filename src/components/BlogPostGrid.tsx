@@ -5,9 +5,10 @@ import Link from "next/link";
 interface BlogPost {
   id: number;
   title: string;
-  category: string;
+  category: string[];
   image: string;
   excerpt: string;
+  url: string;
 }
 
 interface BlogPostGridProps {
@@ -18,9 +19,9 @@ export default function BlogPostGrid({ posts }: BlogPostGridProps) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {posts.map((post) => (
-        <Link href={`/whats-new/${post.id}`} key={post.id}>
-          <Card className="overflow-hidden h-full">
-            <div className="relative h-48">
+        <Link href={`/blog/${post.url}`} key={post.id}>
+          <div className="bg-card rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+            <div className="relative h-64">
               <Image
                 src={post.image}
                 alt={post.title}
@@ -31,11 +32,11 @@ export default function BlogPostGrid({ posts }: BlogPostGridProps) {
             <CardContent className="p-4">
               <h3 className="text-lg font-semibold mb-2">{post.title}</h3>
               <p className="text-sm text-muted-foreground mb-2">
-                {post.category}
+                {post.category.join(", ")} {/* Add comma between categories */}
               </p>
               <p className="text-sm">{post.excerpt}</p>
             </CardContent>
-          </Card>
+          </div>
         </Link>
       ))}
     </div>

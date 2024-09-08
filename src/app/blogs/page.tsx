@@ -5,7 +5,14 @@ import { motion } from "framer-motion";
 import SearchBar from "@/components/SearchBar";
 import CategoryList from "@/components/CategoryList";
 import BlogPostGrid from "@/components/BlogPostGrid";
-
+import {
+  Pagination,
+  PaginationContent,
+  PaginationItem,
+  PaginationNext,
+  PaginationPrevious,
+} from "@/components/ui/pagination";
+import { blogPosts } from "@/data/blogPosts";
 // Mock data for categories and blog posts
 const categories = [
   "All",
@@ -16,26 +23,32 @@ const categories = [
   "Productivity",
 ];
 
-const blogPosts = [
-  {
-    id: 1,
-    title: "10 Tips for Solo Entrepreneurs",
-    category: "Entrepreneurship",
-    image: "/images/blog/entrepreneur.jpg",
-    excerpt:
-      "Learn how to thrive as a solo entrepreneur with these essential tips.",
-  },
-  // Add more mock blog posts here
-];
+const POSTS_PER_PAGE = 9;
 
 export default function WhatsNewPage() {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
+  const [currentPage, setCurrentPage] = useState(1);
 
-  const filteredPosts = blogPosts.filter(
-    (post) =>
-      (selectedCategory === "All" || post.category === selectedCategory) &&
-      post.title.toLowerCase().includes(searchTerm.toLowerCase())
+  const filteredPosts = blogPosts.filter((post) => {
+    const searchFields = [
+      post.title,
+      ...post.category,
+      post.excerpt,
+      //   post.content,
+    ].map((field) => field.toLowerCase());
+
+    return (
+      (selectedCategory === "All" ||
+        post.category.includes(selectedCategory)) &&
+      searchFields.some((field) => field.includes(searchTerm.toLowerCase()))
+    );
+  });
+
+  const totalPages = Math.ceil(filteredPosts.length / POSTS_PER_PAGE);
+  const paginatedPosts = filteredPosts.slice(
+    (currentPage - 1) * POSTS_PER_PAGE,
+    currentPage * POSTS_PER_PAGE
   );
 
   return (
@@ -57,7 +70,27 @@ export default function WhatsNewPage() {
             />
           </div>
           <div className="w-full md:w-3/4">
-            <BlogPostGrid posts={filteredPosts} />
+            <BlogPostGrid posts={paginatedPosts} />
+            <div className="mt-8 flex justify-center">
+              <Pagination>
+                <PaginationContent>
+                  <PaginationItem>
+                    <PaginationPrevious
+                      onClick={() =>
+                        setCurrentPage((prev) => Math.max(1, prev - 1))
+                      }
+                    />
+                  </PaginationItem>
+                  <PaginationItem>
+                    <PaginationNext
+                      onClick={() =>
+                        setCurrentPage((prev) => Math.min(totalPages, prev + 1))
+                      }
+                    />
+                  </PaginationItem>
+                </PaginationContent>
+              </Pagination>
+            </div>
           </div>
         </div>
       </motion.div>
