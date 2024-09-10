@@ -35,5 +35,14 @@ export const blogPosts = [
     excerpt:
       "Discover how A.I is revolutionizing financial management for startups",
   },
+  {
+    id: 4,
+    title: "6 Tips To Improve Productivity In Startups",
+    category: ["Entrepreneurship", "Productivity"],
+    image: "/assets/blogs/financial-analysis.jpg",
+    url: "6-tips-to-improve-productivity-in-startups",
+    excerpt:
+      "Unlock the power of artificial intelligence to supercharge your startup's productivity.",
+  },
   // Add more mock blog posts here
 ];

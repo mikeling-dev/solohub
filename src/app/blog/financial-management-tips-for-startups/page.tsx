@@ -31,7 +31,6 @@ export default function BlogPost({ params }: { params: { id: string } }) {
       <div className="max-w-6xl mx-auto p-6">
         <div className="flex flex-col md:flex-row gap-8">
           <aside className="md:w-1/3">
-            {/* <nav className="bg-secondary p-4 rounded-lg sticky top-4"> */}
             <nav className="bg-secondary md:bg-transparent md:border-r-2 rounded-lg md:rounded-none border-gray-400 p-4 sticky top-4 md:top-8">
               <ul className="space-y-2 font-semibold">
                 <li>
@@ -206,7 +205,12 @@ export default function BlogPost({ params }: { params: { id: string } }) {
               </a>
               <embed
                 src="https://www.backkeeper.com"
-                style={{ width: "100%", height: "600px" }}
+                style={{
+                  width: "100%",
+                  height: "600px",
+                  borderRadius: "10px",
+                  marginTop: "10px",
+                }}
               />
             </h2>
             <p>

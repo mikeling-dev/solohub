@@ -20,7 +20,7 @@ export default function BlogPostGrid({ posts }: BlogPostGridProps) {
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {posts.map((post) => (
         <Link href={`/blog/${post.url}`} key={post.id}>
-          <div className="bg-card rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+          <div className="bg-card rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow dark:bg-secondary">
             <div className="relative h-64">
               <Image
                 src={post.image}
