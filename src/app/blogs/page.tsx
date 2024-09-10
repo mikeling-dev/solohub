@@ -23,7 +23,7 @@ const categories = [
   "Productivity",
 ];
 
-const POSTS_PER_PAGE = 9;
+const POSTS_PER_PAGE = 6;
 
 export default function WhatsNewPage() {
   const [searchTerm, setSearchTerm] = useState("");

@@ -104,13 +104,13 @@ export function NavBar() {
                       {blog.excerpt}
                     </ListItem>
                   ))}
-                  <Link
-                    href="/blogs"
-                    className="flex align-middle items-center justify-center hover:bg-accent hover:text-accent-foreground rounded-sm"
-                  >
-                    View all
-                  </Link>
                 </ul>
+                <Link
+                  href="/blogs"
+                  className="p-2 m-4 mt-0 flex align-middle items-center justify-center hover:bg-accent hover:text-accent-foreground rounded-sm"
+                >
+                  View all
+                </Link>
               </NavigationMenuContent>
             </NavigationMenuItem>
             <NavigationMenuItem>

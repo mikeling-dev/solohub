@@ -19,12 +19,12 @@ export const blogPosts = [
   },
   {
     id: 2,
-    title: "What would the future look like with AI?",
-    category: ["Entrepreneurship", "Product Updates"],
+    title: "What would future businesses look like with AI?",
+    category: ["Entrepreneurship"],
     image: "/assets/blogs/futuristic-natural-city-.jpeg",
-    url: "what-would-the-future-look-like-with-ai",
+    url: "what-would-future-businesses-look-like-with-ai",
     excerpt:
-      "Learn how to thrive as a solo entrepreneur with these essential tips.",
+      "Dive into a world where AI reshapes the landscape for entrepreneurs, startups, and freelancers.",
   },
   {
     id: 3,

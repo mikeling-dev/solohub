@@ -10,7 +10,7 @@ export default function BlogPost({ params }: { params: { id: string } }) {
 
   return (
     <div className="min-h-screen">
-      <div className="relative h-[50vh] w-full">
+      <div className="relative h-[70vh] w-full">
         <Image
           src={post.image}
           alt={post.title}
@@ -23,6 +23,7 @@ export default function BlogPost({ params }: { params: { id: string } }) {
             <span className="text-sm text-gray-300">
               {post.category.join(", ")}
             </span>
+            <p className="text-lg text-white mb-8">{post.excerpt}</p>
           </div>
         </div>
       </div>
