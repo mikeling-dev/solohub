@@ -1,12 +1,3 @@
-type BlogPost = {
-  id: number;
-  title: string;
-  category: string[];
-  image: string;
-  excerpt: string;
-  url: string;
-};
-
 export const blogPosts = [
   {
     id: 1,

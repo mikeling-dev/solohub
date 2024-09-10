@@ -1,12 +1,6 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
-import { Sparkles, Menu } from "lucide-react";
-import Link from "next/link";
-import { ModeToggle } from "./ToggleMode";
-import { MobileMenu } from "./MobileMenu";
-import React, { useState } from "react";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -14,8 +8,13 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
+import { motion } from "framer-motion";
+import { Menu, Sparkles } from "lucide-react";
+import Link from "next/link";
+import React, { useState } from "react";
+import { MobileMenu } from "./MobileMenu";
+import { ModeToggle } from "./ToggleMode";
 
 import { blogPosts } from "@/data/blogPosts";
 import { cn } from "@/lib/utils";

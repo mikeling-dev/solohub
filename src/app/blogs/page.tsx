@@ -59,7 +59,7 @@ export default function WhatsNewPage() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <h1 className="text-4xl font-bold mb-8">What's New</h1>
+        <h1 className="text-4xl font-bold mb-8">What&apos;s New</h1>
         <SearchBar onSearch={setSearchTerm} />
         <div className="flex flex-col md:flex-row mt-8 gap-8">
           <div className="w-full md:w-1/4">

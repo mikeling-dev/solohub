@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { blogPosts } from "@/data/blogPosts"; // Ensure this path is correct
 
-export default function BlogPost({ params }: { params: { id: string } }) {
+export default function BlogPost() {
   const post = blogPosts.find((p) => p.id === 4);
 
   if (!post) {
