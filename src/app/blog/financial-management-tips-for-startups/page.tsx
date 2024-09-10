@@ -213,6 +213,10 @@ export default function BlogPost({ params }: { params: { id: string } }) {
               <a href="https://www.backkeeper.com" target="blank">
                 Backkeeper.com
               </a>
+              <embed
+                src="https://www.backkeeper.com"
+                style={{ width: "100%", height: "600px" }}
+              />
             </h2>
             <p>
               As you explore AI-powered financial management solutions, we
