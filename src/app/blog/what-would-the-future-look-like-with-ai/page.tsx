@@ -33,42 +33,45 @@ export default function BlogPost({ params }: { params: { id: string } }) {
             <nav className="bg-secondary md:bg-transparent md:border-r-2 rounded-lg md:rounded-none border-gray-400 p-4 sticky top-4 md:top-8">
               <ul className="space-y-2 font-semibold">
                 <li>
-                  <a href="#hyper-personalized" className=" hover:underline">
+                  <a href="#hyper-personalized" className=" hover:text-primary">
                     1. Hyper-Personalized Customer Experiences
                   </a>
                 </li>
                 <li>
-                  <a href="#ai-powered" className=" hover:underline">
+                  <a href="#ai-powered" className=" hover:text-primary">
                     2. AI-Powered Creativity and Innovation
                   </a>
                 </li>
                 <li>
-                  <a href="#autonomous-business" className=" hover:underline">
+                  <a
+                    href="#autonomous-business"
+                    className=" hover:text-primary"
+                  >
                     3. Autonomous Business Operations
                   </a>
                 </li>
                 <li>
-                  <a href="#predictive-market" className=" hover:underline">
+                  <a href="#predictive-market" className=" hover:text-primary">
                     4. Predictive Market Analysis and Strategy
                   </a>
                 </li>
                 <li>
-                  <a href="#seemless-language" className=" hover:underline">
+                  <a href="#seemless-language" className=" hover:text-primary">
                     5. Seamless Language and Cultural Barriers
                   </a>
                 </li>
                 <li>
-                  <a href="#ai-enhanced" className=" hover:underline">
+                  <a href="#ai-enhanced" className=" hover:text-primary">
                     6. AI-Enhanced Learning and Skill Development
                   </a>
                 </li>
                 <li>
-                  <a href="#ethical-ai" className=" hover:underline">
+                  <a href="#ethical-ai" className=" hover:text-primary">
                     7. Ethical AI and New Job Opportunities
                   </a>
                 </li>
                 <li>
-                  <a href="#preparing-for" className=" hover:underline">
+                  <a href="#preparing-for" className=" hover:text-primary">
                     Preparing for the AI-Driven Future
                   </a>
                 </li>
@@ -87,7 +90,7 @@ export default function BlogPost({ params }: { params: { id: string } }) {
 
             <h2
               id="hyper-personalized"
-              className="text-2xl font-bold mt-8 mb-4"
+              className="text-2xl font-bold mt-8 mb-4 text-primary"
             >
               1. Hyper-Personalized Customer Experiences
             </h2>
@@ -105,7 +108,10 @@ export default function BlogPost({ params }: { params: { id: string } }) {
               that rival or exceed those of major corporations.
             </p>
 
-            <h2 id="ai-powered" className="text-2xl font-bold mt-8 mb-4">
+            <h2
+              id="ai-powered"
+              className="text-2xl font-bold mt-8 mb-4 text-primary"
+            >
               2. AI-Powered Creativity and Innovation
             </h2>
             <p>
@@ -123,7 +129,7 @@ export default function BlogPost({ params }: { params: { id: string } }) {
 
             <h2
               id="autonomous-business"
-              className="text-2xl font-bold mt-8 mb-4"
+              className="text-2xl font-bold mt-8 mb-4 text-primary"
             >
               3. Autonomous Business Operations
             </h2>
@@ -132,7 +138,7 @@ export default function BlogPost({ params }: { params: { id: string } }) {
               scheduling and{" "}
               <a
                 href="/blog/financial-management-tips-for-startups"
-                className="underline text-blue-500"
+                className="underline text-primary"
               >
                 bookkeeping
               </a>{" "}
@@ -143,9 +149,23 @@ export default function BlogPost({ params }: { params: { id: string } }) {
               <strong>What this means for you:</strong> You'll be free to focus
               on high-level strategy, relationship-building, and the aspects of
               your work that truly require human touch and creativity.
+              <p>
+                Check out{" "}
+                <a
+                  href="https://www.backkeeper.com"
+                  className="text-primary font-bold"
+                  target="_blank"
+                >
+                  Backkeeper AI
+                </a>{" "}
+                for a fully automated bookkeeping and accounting solution.
+              </p>
             </p>
 
-            <h2 id="predictive-market" className="text-2xl font-bold mt-8 mb-4">
+            <h2
+              id="predictive-market"
+              className="text-2xl font-bold mt-8 mb-4 text-primary"
+            >
               4. Predictive Market Analysis and Strategy
             </h2>
             <p>
@@ -162,7 +182,10 @@ export default function BlogPost({ params }: { params: { id: string } }) {
               mainstream.
             </p>
 
-            <h2 id="seamless-language" className="text-2xl font-bold mt-8 mb-4">
+            <h2
+              id="seamless-language"
+              className="text-2xl font-bold mt-8 mb-4 text-primary"
+            >
               5. Seamless Language and Cultural Barriers
             </h2>
             <p>
@@ -178,7 +201,10 @@ export default function BlogPost({ params }: { params: { id: string } }) {
               cultural background.
             </p>
 
-            <h2 id="ai-enhanced" className="text-2xl font-bold mt-8 mb-4">
+            <h2
+              id="ai-enhanced"
+              className="text-2xl font-bold mt-8 mb-4 text-primary"
+            >
               6. AI-Enhanced Learning and Skill Development
             </h2>
             <p>
@@ -195,7 +221,10 @@ export default function BlogPost({ params }: { params: { id: string } }) {
               demands quickly.
             </p>
 
-            <h2 id="ethical-ai" className="text-2xl font-bold mt-8 mb-4">
+            <h2
+              id="ethical-ai"
+              className="text-2xl font-bold mt-8 mb-4 text-primary"
+            >
               7. Ethical AI and New Job Opportunities
             </h2>
             <p>
@@ -210,7 +239,10 @@ export default function BlogPost({ params }: { params: { id: string } }) {
               yourself as an expert in emerging fields.
             </p>
 
-            <h2 id="preparing-for" className="text-2xl font-bold mt-8 mb-4">
+            <h2
+              id="preparing-for"
+              className="text-2xl font-bold mt-8 mb-4 text-primary"
+            >
               Preparing for the AI-Driven Future
             </h2>
             <ol>
