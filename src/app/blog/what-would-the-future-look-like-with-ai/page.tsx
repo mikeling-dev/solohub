@@ -26,10 +26,57 @@ export default function BlogPost({ params }: { params: { id: string } }) {
           </div>
         </div>
       </div>
-      <div className="max-w-4xl mx-auto p-6 bg-white shadow-lg rounded-lg">
-        <div className="prose prose-lg max-w-none mt-8">
-          <main className="space-y-6">
-            <p>
+
+      <div className="max-w-6xl mx-auto p-6">
+        <div className="flex flex-col md:flex-row gap-8">
+          <aside className="md:w-1/3">
+            <nav className="bg-secondary md:bg-transparent md:border-r-2 rounded-lg md:rounded-none border-gray-400 p-4 sticky top-4 md:top-8">
+              <ul className="space-y-2 font-semibold">
+                <li>
+                  <a href="#hyper-personalized" className=" hover:underline">
+                    1. Hyper-Personalized Customer Experiences
+                  </a>
+                </li>
+                <li>
+                  <a href="#ai-powered" className=" hover:underline">
+                    2. AI-Powered Creativity and Innovation
+                  </a>
+                </li>
+                <li>
+                  <a href="#autonomous-business" className=" hover:underline">
+                    3. Autonomous Business Operations
+                  </a>
+                </li>
+                <li>
+                  <a href="#predictive-market" className=" hover:underline">
+                    4. Predictive Market Analysis and Strategy
+                  </a>
+                </li>
+                <li>
+                  <a href="#seemless-language" className=" hover:underline">
+                    5. Seamless Language and Cultural Barriers
+                  </a>
+                </li>
+                <li>
+                  <a href="#ai-enhanced" className=" hover:underline">
+                    6. AI-Enhanced Learning and Skill Development
+                  </a>
+                </li>
+                <li>
+                  <a href="#ethical-ai" className=" hover:underline">
+                    7. Ethical AI and New Job Opportunities
+                  </a>
+                </li>
+                <li>
+                  <a href="#preparing-for" className=" hover:underline">
+                    Preparing for the AI-Driven Future
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </aside>
+          <main className="prose max-w-none md:w-2/3">
+            <p className="text-lg">
               In the not-so-distant future, artificial intelligence (AI) will be
               as ubiquitous as smartphones are today. For solo entrepreneurs,
               startups, and freelancers, this AI-driven world promises both
@@ -38,7 +85,12 @@ export default function BlogPost({ params }: { params: { id: string } }) {
               work and do business.
             </p>
 
-            <h2>1. Hyper-Personalized Customer Experiences</h2>
+            <h2
+              id="hyper-personalized"
+              className="text-2xl font-bold mt-8 mb-4"
+            >
+              1. Hyper-Personalized Customer Experiences
+            </h2>
             <p>
               Imagine a world where your AI assistant knows your customers
               better than you do. It analyzes vast amounts of data to predict
@@ -47,13 +99,15 @@ export default function BlogPost({ params }: { params: { id: string } }) {
               tailored products and services that feel almost clairvoyant in
               their relevance.
             </p>
-            <p className="bg-blue-50 border-l-4 border-blue-500 p-4 text-blue-700">
+            <p className="italic mt-4">
               <strong>What this means for you:</strong> You'll be able to
               compete with larger companies by offering personalized experiences
               that rival or exceed those of major corporations.
             </p>
 
-            <h2>2. AI-Powered Creativity and Innovation</h2>
+            <h2 id="ai-powered" className="text-2xl font-bold mt-8 mb-4">
+              2. AI-Powered Creativity and Innovation
+            </h2>
             <p>
               Creative tasks will be transformed by AI co-pilots that can
               generate ideas, refine concepts, and even produce content.
@@ -61,26 +115,39 @@ export default function BlogPost({ params }: { params: { id: string } }) {
               generates multiple options. Writers could outline a story, and AI
               would flesh out the details.
             </p>
-            <p className="bg-blue-50 border-l-4 border-blue-500 p-4 text-blue-700">
+            <p className="italic mt-4">
               <strong>What this means for you:</strong> Your creative output
               could increase exponentially, allowing you to take on more
               projects or delve deeper into complex creative endeavors.
             </p>
 
-            <h2>3. Autonomous Business Operations</h2>
+            <h2
+              id="autonomous-business"
+              className="text-2xl font-bold mt-8 mb-4"
+            >
+              3. Autonomous Business Operations
+            </h2>
             <p>
               Routine business tasks will be handled entirely by AI. From
-              scheduling and bookkeeping to customer support and project
-              management, AI will take care of the day-to-day operations of your
-              business.
+              scheduling and{" "}
+              <a
+                href="/blog/financial-management-tips-for-startups"
+                className="underline text-blue-500"
+              >
+                bookkeeping
+              </a>{" "}
+              to customer support and project management, AI will take care of
+              the day-to-day operations of your business.
             </p>
-            <p className="bg-blue-50 border-l-4 border-blue-500 p-4 text-blue-700">
+            <p className=" italic mt-4">
               <strong>What this means for you:</strong> You'll be free to focus
               on high-level strategy, relationship-building, and the aspects of
               your work that truly require human touch and creativity.
             </p>
 
-            <h2>4. Predictive Market Analysis and Strategy</h2>
+            <h2 id="predictive-market" className="text-2xl font-bold mt-8 mb-4">
+              4. Predictive Market Analysis and Strategy
+            </h2>
             <p>
               AI will analyze market trends, consumer behavior, and global
               events to predict future market conditions with high accuracy.
@@ -88,14 +155,16 @@ export default function BlogPost({ params }: { params: { id: string } }) {
               make data-driven decisions that were once the domain of large
               corporations with extensive research departments.
             </p>
-            <p className="bg-blue-50 border-l-4 border-blue-500 p-4 text-blue-700">
+            <p className="italic mt-4">
               <strong>What this means for you:</strong> You'll be able to
               position your business ahead of market trends, potentially
               discovering and capitalizing on new niches before they become
               mainstream.
             </p>
 
-            <h2>5. Seamless Language and Cultural Barriers</h2>
+            <h2 id="seamless-language" className="text-2xl font-bold mt-8 mb-4">
+              5. Seamless Language and Cultural Barriers
+            </h2>
             <p>
               Real-time AI translation and cultural context analysis will make
               global business accessible to everyone. Freelancers and small
@@ -103,13 +172,15 @@ export default function BlogPost({ params }: { params: { id: string } }) {
               with AI handling language translation and providing cultural
               insights to avoid misunderstandings.
             </p>
-            <p className="bg-blue-50 border-l-4 border-blue-500 p-4 text-blue-700">
+            <p className="italic mt-4">
               <strong>What this means for you:</strong> Your potential client
               base becomes global, regardless of your language skills or
               cultural background.
             </p>
 
-            <h2>6. AI-Enhanced Learning and Skill Development</h2>
+            <h2 id="ai-enhanced" className="text-2xl font-bold mt-8 mb-4">
+              6. AI-Enhanced Learning and Skill Development
+            </h2>
             <p>
               Continuous learning will be easier than ever, with AI-powered
               platforms that adapt to your learning style, schedule, and skill
@@ -117,27 +188,31 @@ export default function BlogPost({ params }: { params: { id: string } }) {
               existing ones with personalized, just-in-time learning
               experiences.
             </p>
-            <p className="bg-blue-50 border-l-4 border-blue-500 p-4 text-blue-700">
+            <p className="italic mt-4">
               <strong>What this means for you:</strong> Staying competitive and
               relevant in a rapidly changing business landscape becomes more
               manageable, allowing you to adapt to new technologies and market
               demands quickly.
             </p>
 
-            <h2>7. Ethical AI and New Job Opportunities</h2>
+            <h2 id="ethical-ai" className="text-2xl font-bold mt-8 mb-4">
+              7. Ethical AI and New Job Opportunities
+            </h2>
             <p>
               As AI becomes more prevalent, new job opportunities will emerge
               around AI ethics, oversight, and customization. There will be a
               growing need for professionals who can ensure AI systems are
               behaving ethically and in alignment with human values.
             </p>
-            <p className="bg-blue-50 border-l-4 border-blue-500 p-4 text-blue-700">
+            <p className="italic mt-4">
               <strong>What this means for you:</strong> New niches and
               specializations will open up, offering opportunities to position
               yourself as an expert in emerging fields.
             </p>
 
-            <h2>Preparing for the AI-Driven Future</h2>
+            <h2 id="preparing-for" className="text-2xl font-bold mt-8 mb-4">
+              Preparing for the AI-Driven Future
+            </h2>
             <ol>
               <li>
                 <strong>Stay Informed:</strong> Keep up with AI developments in
@@ -162,7 +237,7 @@ export default function BlogPost({ params }: { params: { id: string } }) {
               </li>
             </ol>
 
-            <p>
+            <p className="mt-4">
               The future with AI holds immense potential for solo entrepreneurs,
               startups, and freelancers. By embracing these technologies and
               preparing for the changes ahead, you can position yourself at the
