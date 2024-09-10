@@ -34,27 +34,27 @@ export default function BlogPost({ params }: { params: { id: string } }) {
             <nav className="bg-secondary md:bg-transparent md:border-r-2 rounded-lg md:rounded-none border-gray-400 p-4 sticky top-4 md:top-8">
               <ul className="space-y-2 font-semibold">
                 <li>
-                  <a href="#why-ai" className=" hover:underline">
+                  <a href="#why-ai" className=" hover:text-primary">
                     Why AI for Financial Management?
                   </a>
                 </li>
                 <li>
-                  <a href="#key-areas" className=" hover:underline">
+                  <a href="#key-areas" className=" hover:text-primary">
                     Key Areas Where AI Can Help Your Startup
                   </a>
                 </li>
                 <li>
-                  <a href="#getting-started" className=" hover:underline">
+                  <a href="#getting-started" className=" hover:text-primary">
                     Getting Started with AI Financial Management
                   </a>
                 </li>
                 <li>
-                  <a href="#solution" className=" hover:underline">
+                  <a href="#solution" className=" hover:text-primary">
                     Solution: Backkeeper.com
                   </a>
                 </li>
                 <li>
-                  <a href="#conclusion" className=" hover:underline">
+                  <a href="#conclusion" className=" hover:text-primary">
                     Conclusion
                   </a>
                 </li>
@@ -73,7 +73,10 @@ export default function BlogPost({ params }: { params: { id: string } }) {
               growing business.
             </p>
 
-            <h2 id="why-ai" className="text-2xl font-bold mt-8 mb-4">
+            <h2
+              id="why-ai"
+              className="text-2xl font-bold mt-8 mb-4 text-primary"
+            >
               Why AI for Financial Management?
             </h2>
             <p>
@@ -104,7 +107,10 @@ export default function BlogPost({ params }: { params: { id: string } }) {
               </li>
             </ol>
 
-            <h2 id="key-areas" className="text-2xl font-bold mt-8 mb-4">
+            <h2
+              id="key-areas"
+              className="text-2xl font-bold mt-8 mb-4 text-primary"
+            >
               Key Areas Where AI Can Help Your Startup
             </h2>
             <div>
@@ -164,7 +170,10 @@ export default function BlogPost({ params }: { params: { id: string } }) {
               maximize deductions, and streamline the filing process.
             </p>
 
-            <h2 id="getting-started" className="text-2xl font-bold mt-8 mb-4">
+            <h2
+              id="getting-started"
+              className="text-2xl font-bold mt-8 mb-4 text-primary"
+            >
               Getting Started with AI Financial Management
             </h2>
             <ol className="list-decimal list-inside space-y-2 ml-4">
@@ -198,10 +207,17 @@ export default function BlogPost({ params }: { params: { id: string } }) {
               </li>
             </ol>
 
-            <h2 id="solution" className="text-2xl font-bold mt-8 mb-4">
+            <h2
+              id="solution"
+              className="text-2xl font-bold mt-8 mb-4 text-primary-foreground"
+            >
               Solution:{" "}
-              <a href="https://www.backkeeper.com" target="blank">
-                Backkeeper.com
+              <a
+                href="https://www.backkeeper.com"
+                target="blank"
+                className="text-primary"
+              >
+                Backkeeper AI
               </a>
               <embed
                 src="https://www.backkeeper.com"
@@ -219,15 +235,15 @@ export default function BlogPost({ params }: { params: { id: string } }) {
               <a
                 href="https://www.backkeeper.com"
                 target="blank"
-                className="text-blue-500 hover:text-blue-600 font-bold"
+                className="text-primary font-bold"
               >
-                Backkeeper.com
+                Backkeeper AI
               </a>
               . This fully automated bookkeeping software leverages the power of
               AI to provide a comprehensive solution for startups.
             </p>
 
-            <p>Backkeeper.com offers:</p>
+            <p>Backkeeper AI offers:</p>
             <ul className="list-disc list-inside space-y-2 ml-4">
               <li>Automated transaction categorization</li>
               <li>Real-time financial reporting</li>
@@ -237,9 +253,17 @@ export default function BlogPost({ params }: { params: { id: string } }) {
             </ul>
 
             <p>
-              By using Backkeeper.com, you can streamline your financial
-              processes, gain valuable insights, and focus more on growing your
-              business rather than getting bogged down in financial minutiae.
+              By using{" "}
+              <a
+                href="https://www.backkeeper.com"
+                target="blank"
+                className="text-primary"
+              >
+                Backkeeper AI
+              </a>
+              , you can streamline your financial processes, gain valuable
+              insights, and focus more on growing your business rather than
+              getting bogged down in financial minutiae.
             </p>
 
             <h2 id="conclusion" className="text-2xl font-bold mt-8 mb-4">
